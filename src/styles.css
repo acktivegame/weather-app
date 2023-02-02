@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
+
+h1 {
+  color: #a9adb9;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+ul {
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+}
+li {
+  font-weight: 100;
+  font-size: 16x;
+  line-height: 19px;
+  text-align: right;
+  padding: 0%;
+  margin: block 0px;;
+}
+.sun-icon {
+  font-size: 32px;
+  color: yellow
+}
+.weather-app{
+  border: 1px solid #a9adb9;
+  padding: 13px;
+  border-radius: 10px;
+  max-width: 600px;
+  padding-bottom: 30px;
+  margin: 20px auto;
+
+
+}
+.week{
+  font-size:25px;
+  font-weight 10px;
+  position: relative;
+  position: top; 
+}
+.temp{
+  font-size: 35px;
+
+}
+.search-button{
+  color: blue;
+}
