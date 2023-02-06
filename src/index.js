@@ -19,7 +19,6 @@ function formatDate(date) {
     "Saturday"
   ];
   let day = days[dayToday];
-
   return `${day} ${hours}:${minutes}`;
 }
 
@@ -29,6 +28,7 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
@@ -67,14 +67,15 @@ function getCurrentLocation(event) {
 }
 function convertToFahrenheit(event) {
   event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = 75;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = 23;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 // Feature #1
@@ -92,6 +93,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+celsiusTemperature = response.data.main.temp;
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
