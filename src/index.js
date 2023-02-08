@@ -23,6 +23,7 @@ function formatDate(date) {
 }
 
 function displayWeather(response) {
+  celsiusTemperature = response.data.main.temp;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -93,7 +94,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
-celsiusTemperature = response.data.main.temp;
+let celsiusTemperature;
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
