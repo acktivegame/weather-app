@@ -33,7 +33,7 @@ li {
   border: 1px solid #a9adb9;
   padding: 13px;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 300px;
   padding-bottom: 30px;
   margin: 20px auto;
 
@@ -41,7 +41,7 @@ li {
 }
 .week{
   font-size:25px;
-  font-weight 10px;
+  font-weight: 10px;
   position: relative;
   position: top; 
 }
